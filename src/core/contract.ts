@@ -28,9 +28,10 @@ export type ElementEventAttributeArguments = Update<any, any> | Task | ListenerW
 export interface NodeDescriptorBase extends myra.core.contract.NodeDescriptorBase {}
 export interface TextNodeDescriptor extends myra.core.contract.TextNodeDescriptor {}
 export interface ElementNodeDescriptor extends myra.core.contract.ElementNodeDescriptor {}
+export interface ElementNSNodeDescriptor extends myra.core.contract.ElementNSNodeDescriptor {}
 export interface ComponentNodeDescriptor extends myra.core.contract.ComponentNodeDescriptor {}
 export interface NothingNodeDescriptor extends myra.core.contract.NothingNodeDescriptor {}
-export type NodeDescriptor = TextNodeDescriptor | ElementNodeDescriptor | ComponentNodeDescriptor | NothingNodeDescriptor
+export type NodeDescriptor = TextNodeDescriptor | ElementNodeDescriptor | ElementNSNodeDescriptor | ComponentNodeDescriptor | NothingNodeDescriptor
 
 export type FormValidator = myra.core.contract.FormValidator
 export type FieldValidator = myra.core.contract.FieldValidator

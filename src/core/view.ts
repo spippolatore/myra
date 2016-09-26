@@ -192,6 +192,8 @@ function createNode(descriptor: NodeDescriptor, parentNode: Element): Node {
     switch(descriptor.__type) {
         case 'element':  
             return document.createElement(descriptor.tagName)
+        case 'elementns':  
+            return document.createElementNS(descriptor.ns, descriptor.tagName)
         case 'text':
             return document.createTextNode(descriptor.value)
         case 'component':

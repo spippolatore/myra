@@ -97,6 +97,13 @@ declare namespace myra.core.contract {
         readonly attributes: GlobalAttributes
         readonly children: NodeDescriptor[]
     }
+    interface ElementNSNodeDescriptor extends NodeDescriptorBase {
+        readonly __type: 'elementns'
+        readonly tagName: string
+        readonly ns: string
+        readonly attributes: GlobalAttributes
+        readonly children: NodeDescriptor[]
+    }
     interface ComponentNodeDescriptor extends NodeDescriptorBase {
         readonly __type: 'component'
         readonly name: string
@@ -108,7 +115,7 @@ declare namespace myra.core.contract {
     interface NothingNodeDescriptor extends NodeDescriptorBase {
         readonly __type: 'nothing'
     }
-    type NodeDescriptor = TextNodeDescriptor | ElementNodeDescriptor | ComponentNodeDescriptor | NothingNodeDescriptor
+    type NodeDescriptor = TextNodeDescriptor | ElementNodeDescriptor | ElementNSNodeDescriptor | ComponentNodeDescriptor | NothingNodeDescriptor
 
     type FieldValidationResult = {
         readonly valid: boolean
